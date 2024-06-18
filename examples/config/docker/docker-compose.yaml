@@ -10,6 +10,15 @@ services:
     ports:
       - 9490:9490
     restart: unless-stopped
+  pure-fb-om-exporter:
+    image: quay.io/purestorage/pure-fb-om-exporter:latest
+    command:
+      - '--port=9491'
+    depends_on:
+      - prometheus
+    ports:
+      - 9491:9491
+    restart: unless-stoppe
   prometheus:
     image: prom/prometheus:latest
     command:

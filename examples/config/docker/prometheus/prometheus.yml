@@ -50,6 +50,22 @@ scrape_configs:
         instance: sn1-fb-c07-19
         env: 'FSA Lab'
 
+  - job_name: 'purestorage-fb_policies'
+    metrics_path: /metrics/policies
+    authorization:
+      credentials: T-c19221ef-b362-4cba-83dc-83c175078abd
+    params:
+      endpoint: ['10.21.200.19']
+
+    static_configs:
+    - targets:
+      - pure-fb-om-exporter:9491
+      labels:
+        location: US
+        site: PureTEC
+        instance: sn1-fb-c07-19
+        env: 'FSA Lab'
+
   - job_name: 'purestorage-fb2'
     metrics_path: /metrics/array
     authorization:
@@ -96,6 +112,86 @@ scrape_configs:
         location: US
         site: PureTEC
         instance: sn1-fb-c07-17
+        env: 'FSA Lab'
+
+  - job_name: 'purestorage-fb2_policies'
+    metrics_path: /metrics/policies
+    authorization:
+      credentials: T-51a0e14d-0135-425a-9ca1-96798c2ee945
+    params:
+      endpoint: ['10.21.200.5']
+
+    static_configs:
+    - targets:
+      - pure-fb-om-exporter:9491
+      labels:
+        location: US
+        site: PureTEC
+        instance: sn1-fb-c07-17
+        env: 'FSA Lab'
+
+  - job_name: 'purestorage-fb3'
+    metrics_path: /metrics/array
+    authorization:
+      credentials: T-cad70076-f3cb-4911-8b07-b07f93e299ce
+    params:
+      endpoint: ['10.21.200.40']
+
+    static_configs:
+    - targets:
+      - pure-fb-om-exporter:9491
+      labels:
+        location: US
+        site: PureTEC
+        instance: sn1-s200-c09-33
+        env: 'FSA Lab'
+
+  - job_name: 'purestorage-fb3_clients'
+    metrics_path: /metrics/clients
+    authorization:
+      credentials: T-cad70076-f3cb-4911-8b07-b07f93e299ce
+    params:
+      endpoint: ['10.21.200.40']
+
+    static_configs:
+    - targets:
+      - pure-fb-om-exporter:9491
+      labels:
+        location: US
+        site: PureTEC
+        instance: sn1-s200-c09-33
+        env: 'FSA Lab'
+
+  - job_name: 'purestorage-fb3_usage'
+    metrics_path: /metrics/usage
+    authorization:
+      credentials: T-cad70076-f3cb-4911-8b07-b07f93e299ce
+    params:
+      endpoint: ['10.21.200.40']
+
+    static_configs:
+    - targets:
+      - pure-fb-om-exporter:9491
+      labels:
+        location: US
+        site: PureTEC
+        instance: sn1-s200-c09-33
+        env: 'FSA Lab'
+
+  - job_name: 'purestorage-fb3_policies'
+    metrics_path: /metrics/policies
+    authorization:
+      credentials: T-cad70076-f3cb-4911-8b07-b07f93e299ce
+    params:
+      endpoint: ['10.21.200.40']
+
+    static_configs:
+    - targets:
+      - pure-fb-om-exporter:9491
+      labels:
+        location: US
+        site: PureTEC
+        instance: sn1-s200-c09-33
         env: 'FSA Lab'
 
   - job_name: 'purestorage-fa'
