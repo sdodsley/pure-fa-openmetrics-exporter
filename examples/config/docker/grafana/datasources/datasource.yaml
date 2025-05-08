@@ -3,5 +3,5 @@ datasources:
 - name: Prometheus
   type: prometheus
   access: proxy
-  url: http://localhost:9090
+  url: http://localprometheus:9090
   editable: true
