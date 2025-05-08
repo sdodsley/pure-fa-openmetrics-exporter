@@ -68,6 +68,8 @@ scrape_configs:
 
   - job_name: 'purestorage-fa'
     metrics_path: /metrics/array?namespace=purefa
+    tls_config:
+      insecure_skip_verify: true
     scheme: https
     authorization:
       credentials: f583e773-8d10-688f-b57b-024be8a0a089
@@ -83,6 +85,8 @@ scrape_configs:
 
   - job_name: 'purestorage-fa_volumes'
     metrics_path: /metrics/volumes?namespace=purefa
+    tls_config:
+      insecure_skip_verify: true
     scheme: https
     authorization:
       credentials: f583e773-8d10-688f-b57b-024be8a0a089
@@ -98,6 +102,8 @@ scrape_configs:
 
   - job_name: 'purestorage-fa_hosts'
     metrics_path: /metrics/hosts?namespace=purefa
+    tls_config:
+      insecure_skip_verify: true
     scheme: https
     authorization:
       credentials: f583e773-8d10-688f-b57b-024be8a0a089
@@ -113,6 +119,8 @@ scrape_configs:
 
   - job_name: 'purestorage-fa_pods'
     metrics_path: /metrics/pods?namespace=purefa
+    tls_config:
+      insecure_skip_verify: true
     scheme: https
     authorization:
       credentials: f583e773-8d10-688f-b57b-024be8a0a089
@@ -128,6 +136,8 @@ scrape_configs:
 
   - job_name: 'purestorage-fa_directories'
     metrics_path: /metrics/directories?namespace=purefa
+    tls_config:
+      insecure_skip_verify: true
     scheme: https
     authorization:
       credentials: f583e773-8d10-688f-b57b-024be8a0a089
