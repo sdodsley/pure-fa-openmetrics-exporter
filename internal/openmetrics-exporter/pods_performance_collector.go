@@ -81,6 +81,24 @@ func (c *PodsPerformanceCollector) Collect(ch chan<- prometheus.Metric) {
 		ch <- prometheus.MustNewConstMetric(
 			c.LatencyDesc,
 			prometheus.GaugeValue,
+			hp.QosRateLimitUsecPerMirroredWriteOp,
+			hp.Name, "qos_rate_limit_usec_per_mirrored_write_op",
+		)
+		ch <- prometheus.MustNewConstMetric(
+			c.LatencyDesc,
+			prometheus.GaugeValue,
+			hp.QosRateLimitUsecPerReadOp,
+			hp.Name, "qos_rate_limit_usec_per_read_op",
+		)
+		ch <- prometheus.MustNewConstMetric(
+			c.LatencyDesc,
+			prometheus.GaugeValue,
+			hp.QosRateLimitUsecPerWriteOp,
+			hp.Name, "qos_rate_limit_usec_per_write_op",
+		)
+		ch <- prometheus.MustNewConstMetric(
+			c.LatencyDesc,
+			prometheus.GaugeValue,
 			hp.UsecPerMirroredWriteOp,
 			hp.Name, "usec_per_mirrored_write_op",
 		)
